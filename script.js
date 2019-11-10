@@ -7,7 +7,7 @@ function getURLParameter(name) {
 }
 
 function githubRepo() {
-    var openURL = "stats.html?user=" + encodeURIComponent(document.getElementById("githubUser").value) + "&repo=" + encodeURIComponent(document.getElementById("githubRepo").value) + "&SameSite=Secure";
+    var openURL = "stats.html?user=" + encodeURIComponent(document.getElementById("githubUser").value) + "&repo=" + encodeURIComponent(document.getElementById("githubRepo").value);
     window.location.href = openURL;
 }
 
@@ -15,3 +15,5 @@ function githubRepoLoad() {
     var GitHubUser = getURLParameter("user");
     var GitHubRepo = getURLParameter("repo");
     var jsonURL = "https://api.github.com/repos/" + GitHubUser + "/" + GitHubRepo;
+    window.open(jsonURL)
+}
