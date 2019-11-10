@@ -12,8 +12,8 @@ function githubRepo() {
 }
 
 function githubRepoLoad() {
-    var GitHubUser = getURLParameter("user");
-    var GitHubRepo = getURLParameter("repo");
-    var jsonURL = "https://api.github.com/repos/" + GitHubUser + "/" + GitHubRepo;
-    window.open(jsonURL)
+    var GitHubUsername = getURLParameter("user");
+    var GitHubRepositoryName = getURLParameter("repo");
+    var jsonURL = "https://api.github.com/repos/" + GitHubUsername + "/" + GitHubRepositoryName;
+    window.open(jsonURL);
 }
